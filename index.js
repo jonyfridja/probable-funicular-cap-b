@@ -1,15 +1,14 @@
+"use strict";
+
 const express = require('express');
 const morgan = require('morgan');
-
+const transactionsRouter = require('./routes/transactions.routes');
 const app = express();
 
 
 app.use(morgan('tiny'));
 
-app.get('/', function (req, res) {
-    res.send('hello, world!');
-})
-
+app.use(transactionsRouter);
 
 const PORT = process.env.PORT || 3030;
 app.listen(PORT);
