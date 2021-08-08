@@ -1,17 +1,10 @@
 const mockedTransactions = require('./transactions.mock');
-
-
 class TransactionsController {
     transactions = mockedTransactions;
 
-    get() {
-        
+    get = () => {
+        return this.transactions
     }
-
-    getById() {
-
-    }
-
 }
 
 module.exports = new TransactionsController();
