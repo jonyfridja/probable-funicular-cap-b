@@ -14,5 +14,13 @@ transactionsRouter.get('/transactions', async function (req, res, next) {
 
     }
 })
+transactionsRouter.post('/transactions', async function (req, res, next) {
+    try {
+        res.json(await transactionsController.create(req.body));
+    } catch (err) {
+        
+        res.status(400).send(err.message);
+    }
+})
 
 module.exports = transactionsRouter;
