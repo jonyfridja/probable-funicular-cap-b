@@ -2,7 +2,7 @@
 
 const express = require('express');
 const morgan = require('morgan');
-const transactionsRouter = require('./routes/transactions.routes');
+const transactionsRouter = require('./routes/transactions/transactions.routes');
 const app = express();
 
 

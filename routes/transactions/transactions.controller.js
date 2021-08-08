@@ -2,7 +2,7 @@ const mockedTransactions = require('./transactions.mock');
 class TransactionsController {
     transactions = mockedTransactions;
 
-    get = () => {
+    get = async () => {
         return this.transactions
     }
 }
