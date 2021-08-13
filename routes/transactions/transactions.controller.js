@@ -8,7 +8,7 @@ class TransactionsController {
     }
 
     create = async (transaction) => {
-        const keys = ['tradingParty',
+        const keys = ['tradingparty',
             'counterparty',
             'amount'];
 
