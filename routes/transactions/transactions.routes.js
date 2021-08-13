@@ -3,7 +3,7 @@ const transactionsRouter = new Router();
 const transactionsController = require('./transactions.controller')
 
 
-transactionsRouter.get('/transactions', async function (req, res, next) {
+transactionsRouter.get('/', async function (req, res, next) {
     try {
         const transactions = await transactionsController.get()
         console.log('?')
@@ -14,11 +14,10 @@ transactionsRouter.get('/transactions', async function (req, res, next) {
 
     }
 })
-transactionsRouter.post('/transactions', async function (req, res, next) {
+transactionsRouter.post('/', async function (req, res, next) {
     try {
         res.json(await transactionsController.create(req.body));
     } catch (err) {
-        
         res.status(400).send(err.message);
     }
 })

@@ -17,7 +17,7 @@ if (process.env.NODE_ENV !== 'production')
         origin: 'http://localhost:3000'
     }))
 
-app.use(transactionsRouter);
+app.use('/transactions', transactionsRouter);
 
 const PORT = process.env.PORT || 3030;
 app.listen(PORT);
